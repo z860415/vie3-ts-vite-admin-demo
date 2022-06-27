@@ -1,9 +1,9 @@
 <template>
-  <div> {{ message ? '判斷為真' : '判斷為假'}}</div>
+  <div v-html="message"></div>
 </template>
 
 <script setup lang="ts">
-const message: number = 0
+const message: string = "<section> demo </section>"
 
 </script>
 
