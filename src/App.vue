@@ -1,10 +1,17 @@
 <template>
-  <div v-show="flag" v-html="message"></div>
+  <div @click="parent">
+  <button @click.stop="clickTap">click</button>
+  </div>
 </template>
 
 <script setup lang="ts">
-const message: string = "<section> demo </section>"
-const flag: boolean = false
+const parent = () => {
+    console.log('父級')
+}
+
+const   clickTap = () => {
+    console.log('子級')
+}
 
 </script>
 
