@@ -1,16 +1,18 @@
 <template>
-  <div @click="parent">
-  <button @click.stop="clickTap">click</button>
+  <div v-bind:style="style">
+  demo string
   </div>
 </template>
 
 <script setup lang="ts">
-const parent = () => {
-    console.log('父級')
+type Style = {
+  color: String,
+  height: String
 }
 
-const   clickTap = () => {
-    console.log('子級')
+const style: Style = {
+    color: "blue",
+    height: "300px"
 }
 
 </script>
