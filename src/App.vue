@@ -1,5 +1,5 @@
 <template>
-  <div v-if="flag" v-html="message"></div>
+  <div v-show="flag" v-html="message"></div>
 </template>
 
 <script setup lang="ts">
