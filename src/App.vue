@@ -1,9 +1,10 @@
 <template>
-  <div v-html="message"></div>
+  <div v-if="flag" v-html="message"></div>
 </template>
 
 <script setup lang="ts">
 const message: string = "<section> demo </section>"
+const flag: boolean = false
 
 </script>
 
