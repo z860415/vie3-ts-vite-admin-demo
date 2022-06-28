@@ -1,25 +1,16 @@
 <template>
-<div>
-{{message}}
-</div>
+  <layout></layout>
 </template>
 
 <script setup lang="ts">
-import { reactive } from 'vue';
-
-type O = {
-  list: number[]
-}
-
-let message = reactive<O>({
-  list:[]
-})
-
-setTimeout(() => {
-  message.list = [1,2,3,4,5,6]
-}, 1000)
-
+import layout from "./layout/index.vue";
 </script>
 
-<style>
+<style lang="less" scoped>
+html,
+body,
+#app {
+  height: 100%;
+  overflow: hidden;
+}
 </style>
