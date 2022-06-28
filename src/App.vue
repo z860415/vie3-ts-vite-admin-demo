@@ -1,19 +1,23 @@
 <template>
 <div>
-  <button @click="changeMessage">change</button>
-  <div>
-    {{ message }}
-  </div>
+{{message}}
 </div>
 </template>
 
 <script setup lang="ts">
-import { ref, Ref } from 'vue'
+import { reactive } from 'vue';
 
-let message: Ref<string> = ref("demo_message")
-const changeMessage = () => {
-    message.value = "changeMessage"
+type O = {
+  list: number[]
 }
+
+let message = reactive<O>({
+  list:[]
+})
+
+setTimeout(() => {
+  message.list = [1,2,3,4,5,6]
+}, 1000)
 
 </script>
 
