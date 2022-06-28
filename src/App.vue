@@ -1,18 +1,18 @@
 <template>
-  <div v-bind:style="style">
-  demo string
+<div>
+  <button @click="changeMessage">change</button>
+  <div>
+    {{ message }}
   </div>
+</div>
 </template>
 
 <script setup lang="ts">
-type Style = {
-  color: String,
-  height: String
-}
+import { ref, Ref } from 'vue'
 
-const style: Style = {
-    color: "blue",
-    height: "300px"
+let message: Ref<string> = ref("demo_message")
+const changeMessage = () => {
+    message.value = "changeMessage"
 }
 
 </script>
